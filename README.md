@@ -1,2 +1,2 @@
-# assignmentsem21
-Future Programming Assignment
+A simple dictionary made using lists.
+©Rosu Razvan, 2017. All rights reserved.
