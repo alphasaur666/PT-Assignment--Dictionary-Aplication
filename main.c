@@ -1,3 +1,9 @@
+/**
+*@mainpage
+* \brief \b Task \b Advanced \b Application \b 15: A dictionary application.
+* \author Rosu Razvan-Virgil
+* \date 20.06.2017
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
@@ -7,9 +13,9 @@ int main(){
   int def_number;
   char word_to_find[20];
   char definition[20];
+///> The main file consists in how the application was organised.
 ///> The dictionary is using 2 .c files, in one of it we store the functions that we need in order to run the application, and a header file. Those files are made for code arrangement.
-///> The user will be asked through a dialog where he needs to press a key in order to execute a function. getch funtcion is used here for getting the character associated with the fucntions.
-///> Also, because I am using a linked-list implementation, the structure of the dictionary is allocated dynamically for a better execution time.
+///> The user will be asked through a dialog where he needs to press a key in order to execute a function. getch funtcion is used here for getting the character associated with the functions.
 
   struct Dictionary *head = malloc(sizeof(struct Dictionary));
   head->next = NULL;

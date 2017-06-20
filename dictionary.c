@@ -4,6 +4,9 @@
 #include "dictionary.h"
 
 void add_dictionary(struct Dictionary *head){ ///> Function for adding the word into the list.
+  /*!
+	*  \param head = The head of the list, the beginning of it.
+	*/
 
 
     struct Dictionary *iterator = head;
@@ -26,7 +29,9 @@ void add_dictionary(struct Dictionary *head){ ///> Function for adding the word 
 
 int check_word(struct Dictionary *head, char word_to_find[20]){ ///> Function for checking if a word exists in our list.
   /*!
+  *
   * 	\param word_to_find = the target word.
+  *   \param head = The head of the list, the beginning of it.
   */
     struct Dictionary *iterator = head;
 
@@ -42,7 +47,9 @@ int check_word(struct Dictionary *head, char word_to_find[20]){ ///> Function fo
 }
 
 void show_dictionary(struct Dictionary *head){ ///>  Function for showing the word and its multiple/single definitions. We are searching for the word, and we are printing it alongside its definition.
-
+  /*!
+  *  \param head = The head of the list, the beginning of it.
+  */
     struct Dictionary *iterator = head;
     int i;
 
@@ -56,9 +63,10 @@ void show_dictionary(struct Dictionary *head){ ///>  Function for showing the wo
 
 void update_definition (struct Dictionary *head, int definition_number, char word_to_update[20], char definition[100]){ ///> Function for updating a definition of a word. Any definition can be updated. The function will search the definition based on its definition number and it will replace the current definition with the one you desire.
   /*!
-	* 	\param definition_number = The number of the definition that we want to update.
-	* 	\param word_to_update = The target word that needs its definition updated.
-  *   \param definition = The updated definition.
+	*  \param definition_number = The number of the definition that we want to update.
+	*  \param word_to_update = The target word that needs its definition updated.
+  *  \param definition = The updated definition.
+  *  \param head = The head of the list, the beginning of it.
 	*/
 
 
@@ -86,8 +94,9 @@ void update_definition (struct Dictionary *head, int definition_number, char wor
 
 void add_definition (struct Dictionary *head, char word_to_add[20], char definition[100]){  ///> Function for adding a definition to a word. The definition will be inserted based on the position where we find place in the list.
   /*!
-	* 	\param word_to_add = The target word that needs its definition added.
+	*   \param word_to_add = The target word that needs its definition added.
   *   \param definition = The added definition.
+  *   \param  head = The head of the list, the beginning of it.
 	*/
     int i = 0;
     struct Dictionary *iterator = head;
@@ -109,8 +118,10 @@ void add_definition (struct Dictionary *head, char word_to_add[20], char definit
 }
 
 
-void look_for_definition (struct Dictionary *head){  ///>Function for searching for the definitions of a word. The word must exist, although the function will return a negative approach. Based on the search for the word who has a defintion allocated to it.
-
+void look_for_definition (struct Dictionary *head){  ///> Function for searching for the definitions of a word. The word must exist, although the function will return a negative approach. Based on the search for the word who has a defintion allocated to it.
+  /*!
+  *  \param  head = The head of the list, the beginning of it.
+  */
     struct Dictionary *iterator = head;
     char word[20];
     int i;
@@ -132,7 +143,9 @@ void look_for_definition (struct Dictionary *head){  ///>Function for searching 
 
 }
 void add_another_definition(struct Dictionary *head){ ///> Function for adding another definition to the list for a certain word. The function asks for the word, in order to not change the definition of a undesired word.
-
+  /*!
+  *  \param  head = The head of the list, the beginning of it.
+  */
     struct Dictionary *iterator = head;
     char word[20];
     int i;
@@ -160,8 +173,10 @@ void add_another_definition(struct Dictionary *head){ ///> Function for adding a
 
 
 void save_to_file(char file[256], struct Dictionary *head){ ///> Function for saving the content of the dictionary into a file.
+
   /*!
-	* 	\param file = The file where we are going to save the data.
+	*   \param file = The file where we are going to save the data.
+  *   \param head = The head of the list, the beginning of it.
 	*/
 
     struct Dictionary *iterator = head;
